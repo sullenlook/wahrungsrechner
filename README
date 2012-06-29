@@ -1,0 +1,19 @@
+WÄHRUNGSRECHNER PLUGIN IN DEUTSCH
+
+
+Sag "umtausch|umtauschen 7 Dollar in Euro" oder "tausch 7 Euro in Dollar" und Siri sagt Dir wieviel Euros, Dollar sind und umgekehrt.
+
+
+Clone wahrungsrechner in Dein plugins Ordner.
+ˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆ
+
+        https://github.com/sullenlook/wahrungsrechner.git
+
+
+Füge folgendes in plugins.conf:
+ˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆ
+
+        wahrungsrechner
+
+
+FERTIG
