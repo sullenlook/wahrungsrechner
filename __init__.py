@@ -17,7 +17,7 @@ class currencyConverter(Plugin):
         else:
             return ""
 
-    @register("de-DE", ".*(umtausch|umtauschen|tausch) (?P<amount>[0-9,\.]+) (?P<from>[^ ]+) in (?P<to>[^ ]+)")
+    @register("de-DE", ".*Tausche (?P<amount>[0-9,\.]+) (?P<from>[^ ]+) in (?P<to>[^ ]+)")
     def converter(self, speech, language, regMatched):
 
         amount = regMatched.group("amount").strip()
@@ -45,7 +45,7 @@ class currencyConverter(Plugin):
             return
 
 
-        self.say(u"Wie suche ich "+str(amount)+" "+currency_from+" in "+currency_to+"...")
+        self.say(u"Ich rechne "+str(amount)+" "+currency_from+" in "+currency_to+" um...")
 
         change = None
         try:
@@ -54,7 +54,7 @@ class currencyConverter(Plugin):
             pass
 
         if change != None:
-            self.say(str(amount) + " " + currency_from + u" équivaut à " +str(round(amount*float(change),2))+ " "+currency_to + ".")
+            self.say(str(amount) + " " + currency_from + u" sind etwa " +str(round(amount*float(change),2))+ " "+currency_to + ".")
         else:
             self.say(u"Ich schaffe es nicht den aktuellen Wechselkurs zu finden.")
 
